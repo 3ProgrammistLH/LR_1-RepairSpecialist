@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kokarev LR_1", "Kokarev LR_1.csproj", "{3E8442EC-00E7-4554-BC2E-B688BECA1DC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kokarev LR_RKIS", "Kokarev LR_RKIS.csproj", "{3E8442EC-00E7-4554-BC2E-B688BECA1DC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
