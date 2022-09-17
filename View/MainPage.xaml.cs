@@ -8,6 +8,17 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         BindingContext = new RepairSpecialistViewModel();
+
+    }
+
+    private void CollectionView_ScrollToRequested(object sender, ScrollToRequestEventArgs e)
+    {
+
+    }
+
+    private void ContentPage_NavigatedTo(object sender, NavigatedToEventArgs e)
+    {
+
     }
 }
 

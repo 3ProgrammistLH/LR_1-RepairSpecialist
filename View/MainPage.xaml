@@ -1,65 +1,75 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Kokarev_LR_1.MainPage">
-    <StackLayout>
-        <Grid ColumnDefinitions="*,*">
-            <ScrollView Grid.Column="0">
+             x:Class="Kokarev_LR_1.MainPage"
+             BackgroundColor="Black">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+                     Text="Добавить"
+                     Order="Secondary"
+                     Priority="0"
+                     Command="{Binding AddItemCommand}"/>
+    </ContentPage.ToolbarItems>
+    <Grid ColumnDefinitions="*,*">
+        <ScrollView Grid.Column="0">
+            <StackLayout>
                 <CollectionView ItemsSource="{Binding RepairSpecialists}"
                                 SelectedItem="{Binding SelectedItem}"
                                 SelectionMode="Single">
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid RowSpacing="10"
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid RowSpacing="10"
                                   VerticalOptions="Center">
-                                    <Frame BorderColor="BlueViolet"
-                                       CornerRadius="2"
+                                <Frame BackgroundColor="Black"
+                                       BorderColor="BlueViolet"
+                                       CornerRadius="3"
                                        HasShadow="True"
                                        VerticalOptions="Center"
                                        Margin="10">
-                                        <Grid ColumnDefinitions="100,*,*"
+                                    <Grid ColumnDefinitions="100,*,*"
                                               ColumnSpacing="2">
-                                            <Frame CornerRadius="4"
+                                        <Frame CornerRadius="4"
                                                    HeightRequest="50"
                                                    WidthRequest="50"
                                                    Padding="0"
                                                    HorizontalOptions="Start">
-                                                <Image Source="{Binding Image}"
+                                            <Image     Source="{Binding Image}"
                                                        Grid.Column="0"
                                                        HeightRequest="50"
-                                                       WidthRequest="50"
-                                                       />
-                                            </Frame>
-                                            <Label Text="{Binding Name}"
-                                                   FontSize="Medium" 
+                                                       WidthRequest="50"/>
+                                        </Frame>
+                                        <Label Text="{Binding Name}"
+                                                   FontSize="Medium"
                                                    Grid.Column="1"
-                                                   VerticalOptions="Center"/>
-                                            <Frame BackgroundColor="BlueViolet"
+                                                   VerticalOptions="Center" 
+                                                   TextColor="White"/>
+                                        <Frame BackgroundColor="BlueViolet"
                                                    CornerRadius="3"
                                                    HeightRequest="18"
                                                    HorizontalOptions="Start"
                                                    Padding="0"
                                                    Margin="0,-7,0,0"
                                                    Grid.Column="2">
-                                                <Label Text="{Binding TypeOfRepair}"
+                                            <Label Text="{Binding TypeOfRepair}"
                                                        TextColor="White"
                                                        FontSize="10"
                                                        HorizontalOptions="Center"
                                                        VerticalOptions="Center"
                                                        Padding="9,0,7,4" />
-                                            </Frame>
-                                        </Grid>
-                                    </Frame>
-                                </Grid>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
-            </ScrollView>
-            <ScrollView Grid.Column="1">
-                <Label Text="{Binding Desc}"
+                                        </Frame>
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+        <ScrollView Grid.Column="1">
+            <Label Text="{Binding Desc}"
+                       TextColor="White"
                        FontSize="Medium"
-                       HorizontalTextAlignment="Center"/>
-            </ScrollView>
-        </Grid>
-    </StackLayout>
+                       HorizontalTextAlignment="Center" />
+        </ScrollView>
+    </Grid>
 </ContentPage>

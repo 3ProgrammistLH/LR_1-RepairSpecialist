@@ -1,11 +1,13 @@
 ﻿using Kokarev_LR_1.Model;
 using Kokarev_LR_1.Services;
+using Microsoft.Maui.Controls;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace Kokarev_LR_1.ViewModel
 {
@@ -43,6 +45,21 @@ namespace Kokarev_LR_1.ViewModel
                 OnPropertyChanged(nameof(Desc));
             }
         }
+        // Команда для добавления нового элемента в коллекцию
+        public ICommand AddItemCommand => new Command(() => AddNewItem());
+
+        // Метод для создания нового элемента
+        private void AddNewItem()
+        {
+            RepairSpecialists.Add(new RepairSpecialist
+            {
+                Id = RepairSpecialists.Count + 1,
+                Name = "Name" + RepairSpecialists.Count,
+                Description = "Description",
+                TypeOfRepair = "Type Of Repair"
+            });
+        }
+
 
         // Метод получения коллекции объектов
         async Task GetRepairSpecialistsAsync()
