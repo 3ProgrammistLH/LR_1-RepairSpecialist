@@ -8,9 +8,9 @@
                 <CollectionView ItemsSource="{Binding RepairSpecialists}"
                                 SelectedItem="{Binding SelectedItem}"
                                 SelectionMode="Single">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid RowSpacing="10"
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid RowSpacing="10"
                                   VerticalOptions="Center">
                                     <Frame BorderColor="BlueViolet"
                                        CornerRadius="2"
@@ -19,45 +19,43 @@
                                        Margin="10">
                                         <Grid ColumnDefinitions="100,*,*"
                                               ColumnSpacing="2">
-                                            <StackLayout Orientation="Horizontal">
-                                                <Frame CornerRadius="4"
+                                            <Frame CornerRadius="4"
                                                    HeightRequest="50"
                                                    WidthRequest="50"
                                                    Padding="0"
                                                    HorizontalOptions="Start">
-                                                    <Image Source="{Binding Image}"
+                                                <Image Source="{Binding Image}"
                                                        Grid.Column="0"
                                                        HeightRequest="50"
                                                        WidthRequest="50"
                                                        />
-                                                </Frame>
-                                                <Label Text="{Binding Name}"
+                                            </Frame>
+                                            <Label Text="{Binding Name}"
                                                    FontSize="Medium" 
                                                    Grid.Column="1"
                                                    VerticalOptions="Center"/>
-                                                <Frame BackgroundColor="BlueViolet"
+                                            <Frame BackgroundColor="BlueViolet"
                                                    CornerRadius="3"
                                                    HeightRequest="18"
                                                    HorizontalOptions="Start"
                                                    Padding="0"
                                                    Margin="0,-7,0,0"
                                                    Grid.Column="2">
-                                                    <Label Text="{Binding TypeOfRepair}"
+                                                <Label Text="{Binding TypeOfRepair}"
                                                        TextColor="White"
                                                        FontSize="10"
                                                        HorizontalOptions="Center"
                                                        VerticalOptions="Center"
                                                        Padding="9,0,7,4" />
-                                                </Frame>
-                                            </StackLayout>
+                                            </Frame>
                                         </Grid>
                                     </Frame>
                                 </Grid>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
             </ScrollView>
-                <ScrollView Grid.Column="1">
+            <ScrollView Grid.Column="1">
                 <Label Text="{Binding Desc}"
                        FontSize="Medium"
                        HorizontalTextAlignment="Center"/>
