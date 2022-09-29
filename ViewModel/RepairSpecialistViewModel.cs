@@ -31,6 +31,8 @@ namespace Kokarev_LR_1.ViewModel
         /* Публичное свойство для представления
         описания выбранного элемента из коллекции */
         public string Desc { get; set; }
+        public string Title { get; set; }
+        public bool CurrentColor { get; set; }
 
         /* Свойство для представления и изменения
         состояния выбранного объекта */
@@ -41,8 +43,12 @@ namespace Kokarev_LR_1.ViewModel
             {
                 _selectedItem = value;
                 Desc = value?.Description;
+                Title = value?.Name;
+                CurrentColor = true;
                 // Метод отвечает за обновление данных в реальном времени
                 OnPropertyChanged(nameof(Desc));
+                OnPropertyChanged(nameof(Title));
+                OnPropertyChanged(nameof(CurrentColor));
             }
         }
         // Команда для добавления нового элемента в коллекцию
@@ -51,14 +57,27 @@ namespace Kokarev_LR_1.ViewModel
         // Метод для создания нового элемента
         private void AddNewItem()
         {
-            RepairSpecialists.Add(new RepairSpecialist
+            var restaurant = new RepairSpecialist
             {
                 Id = RepairSpecialists.Count + 1,
-                Name = "Name" + RepairSpecialists.Count,
+                Name = "Title " + RepairSpecialists.Count,
                 Description = "Description",
-                TypeOfRepair = "Type Of Repair"
-            });
+                TypeOfRepair = "Type Of Repair "
+            };
+            RepairSpecialists.Insert(0, restaurant);
         }
+
+        // Команда для удаления выбранного элемента
+        public ICommand RemoveItemCommand => new Command(() => RemoveItem());
+
+
+        // Метод удаления элемента коллекции
+        private void RemoveItem()
+        {
+            RepairSpecialists.Remove(_selectedItem);
+        }
+
+
 
 
         // Метод получения коллекции объектов
