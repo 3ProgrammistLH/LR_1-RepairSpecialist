@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kokarev LR_RKIS", "Kokarev LR_RKIS.csproj", "{3E8442EC-00E7-4554-BC2E-B688BECA1DC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kokarev_LR_RKIS", "Kokarev_LR_RKIS.csproj", "{3E8442EC-00E7-4554-BC2E-B688BECA1DC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepairSpecialist.Tests", "..\RKIS\RepairSpecialist.Tests\RepairSpecialist.Tests.csproj", "{DE311118-0837-48F2-938C-9D7E60F8949C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,10 @@ Global
 		{3E8442EC-00E7-4554-BC2E-B688BECA1DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E8442EC-00E7-4554-BC2E-B688BECA1DC6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3E8442EC-00E7-4554-BC2E-B688BECA1DC6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DE311118-0837-48F2-938C-9D7E60F8949C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE311118-0837-48F2-938C-9D7E60F8949C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE311118-0837-48F2-938C-9D7E60F8949C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE311118-0837-48F2-938C-9D7E60F8949C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
