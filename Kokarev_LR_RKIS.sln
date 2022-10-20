@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kokarev_LR_RKIS", "Kokarev_LR_RKIS.csproj", "{3E8442EC-00E7-4554-BC2E-B688BECA1DC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepairSpecialist.Tests", "..\RKIS\RepairSpecialist.Tests\RepairSpecialist.Tests.csproj", "{DE311118-0837-48F2-938C-9D7E60F8949C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepairSpecialist.Tests", "RKIS\RepairSpecialist.Tests\RepairSpecialist.Tests.csproj", "{DE311118-0837-48F2-938C-9D7E60F8949C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
